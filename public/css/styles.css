@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #eac936;
+}
+
+main {
+    color: #666;
+    background-color: #ebebeb;
+    text-align: center;
+}
+
+footer {
+    color: #666;
+    text-align: center;
+}
+
+.cuerpos {
+    font-size: 12px;
+}
+
+.titulares {
+    font-size: 24px;
+}
+
+.precios {
+    font-size: 18px;
+}
+
+.descuentos {
+    font-size: 16px;
+    color: #39b54a;
+}
+
+.descripciones {
+    font-size: 16px;
+}
+
+.producto {
+    background-color: white;
+}
