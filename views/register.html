@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+</head>
+
+<body>
+    <form action="/datos" method="POST">
+        <section class="datos-basicos">
+            <div>
+                <input type="text" name="nombre-y-apellido" id="nombre-y-apellido" placeholder="Nombre y apellido" minlength="10" required>
+            </div>
+            <div>
+                <input type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Nombre de usuario" minlength="6" required>
+            </div>
+            <div>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </div>
+            <div>
+                <label for="fecha-nacimiento"> Fecha de Naciemiento</label>
+            </div>
+            <div>
+                <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" required>
+            </div>
+            <div>
+                <input type="text" name="domicilio" id="domicilio" placeholder="Domicilio">
+            </div>
+        </section>
+        <section class="perfil-usuario">
+            <div><label for="perfil-usuario">Perfil usuario</label></div>
+
+            <div>
+                <input type="radio" name="perfil-usuario" id="perfil-usuario" value="comprador"><span> Comprador</span>
+                <input type="radio" name="perfil-usuario" id="perfil-usuario" value="vender"><span> Vendedor</span>
+            </div>
+        </section>
+        <section class="intereses">
+            <div><label for="intereses">Intereses</label></div>
+
+            <div><input type="checkbox" name="intereses" id="intereses" value="Electro"><span>Electro</span> </div>
+            <div> <input type="checkbox" value="Moda" name="intereses" id="intereses"><span>Moda</span></div>
+            <div><input type="checkbox" value="Hogar" name="intereses" id="intereses"><span>Hogar</span></div>
+            <div><input type="checkbox" value="Jugueteria" name="intereses" id="intereses"><span>Juguetería</span></div>
+            <div><input type="checkbox" value="Vida Sana" name="intereses" id="intereses"><span>Vida Sana</span></div>
+        </section>
+        <section class="foto">
+           <div><label for="foto-perfil">Foto de perfil</label></div> 
+           <div><input type="file" name="foto-perfil" id="foto-perfil"></div>
+        </section>
+        <section class="password">
+            <div><label for="pass">Contraseña</label></div>
+            <div><input type="password" name="contraseña" id="pass" placeholder="Elegí tu contraseña" minlength="8" required></div>
+            <div><input type="password" name="confirmar-contraseña" id="confirm-pass" placeholder="Volvé a ingresar la contraseña que elegiste" required></div>
+        </section>
+        <div><button href="/home.html" type="send">Enviar</button></div>
+
+
+    </form>
+</body>
+
+</html>
