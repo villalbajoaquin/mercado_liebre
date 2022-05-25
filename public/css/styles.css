@@ -1,44 +1,314 @@
 * {
     box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
     font-family: 'Roboto', sans-serif;
-}
-
-header {
-    background-color: #eac936;
-}
-
-main {
-    color: #666;
     background-color: #ebebeb;
-    text-align: center;
 }
 
-footer {
-    color: #666;
-    text-align: center;
-}
-
-.cuerpos {
-    font-size: 12px;
-}
-
-.titulares {
+h3 {
     font-size: 24px;
 }
 
-.precios {
-    font-size: 18px;
+p {
+    font-size: 12px;
 }
 
-.descuentos {
+header {
+    background-color: #EAC926;
+    width: 100%;
+}
+
+.top-header {
+    padding: 2%;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-header .logo {
+    width: 200px;
+    max-width: 50%;
+    padding: 10px;
+}
+
+.top-header .logo img {
+    width: 100%;
+}
+
+.top-header p {
+    flex-grow: 3;
+    justify-self: center;
+}
+
+.top-header .form {
+    max-width: 50%;
+    position: relative;
+    right: 10px;
+}
+
+.top-header .form input{
+    width: 75%;
+}
+
+.top-header .form button {
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    padding: 2px;
+}
+
+.top-header .form .submit {
+    background-color: #FFF;
+    border: 1px solid #000;
+    color: #666;
+    width: 15%;
+}
+
+header nav {
+    font-size: 12px;
+    width: 100%;
+    display: block;
+}
+
+header ul li {
+    padding: 10px 0;
+    list-style-type: none;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+header nav ul {
+    display: block;
+    justify-content: space-around;
+}
+
+
+/* Desplegable */
+
+#desplegable {
+    text-align: center;
+}
+
+nav li {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~nav li {
+    display: block;
+}
+
+.burger-menu {
+    text-align: center;
+    cursor: pointer;
+}
+
+.burger-menu i {
+    background-color: #0044AA;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    margin: 10px 0px 20px 0px;
+    padding: 10px;
+}
+
+/* Fin Desplegable */
+
+.precios {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-article .price {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.discount,
+.description {
     font-size: 16px;
+    font-weight: normal;
+}
+
+h3,
+.description {
+    color: #666;
+}
+
+.description {
+    display: none;
+    margin-top: 20px;
+}
+
+section.banner img {
+    width: 100%;
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main section article {
+    background-color: #fff;
+    margin: 10px 0px;
+    position: relative;
+}
+
+main section article img {
+    width: 100%;
+}
+
+main section article i,
+.discount {
     color: #39b54a;
 }
 
-.descripciones {
-    font-size: 16px;
+article .main-article {
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+    position: relative;
 }
 
-.producto {
-    background-color: white;
+.main-article i {
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px
+}
+
+main section h3 {
+    margin: 20px 0px;
+}
+
+/* Flex cards */
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.products article {
+    flex: 0 1 100%;
+}
+
+/* Footer */
+footer {
+    color: #666;
+    text-align: center;
+    margin: 0 20px;
+}
+
+footer h4 {
+    margin: 20px 0;
+}
+
+footer i {
+    color: #0044AA;
+
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+@media (min-width: 480px) {
+    .burger-menu {
+        display: none;
+    }
+
+    .top-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    nav li {
+        position: relative;
+        display: flex;
+    }
+
+    ul .compra {
+        display: flex;
+    }
+
+    ul .cuenta {
+        display: flex;
+    }
+
+
+    .form {
+        position: absolute;
+        right: 50px;
+    }
+
+    main section article .description {
+        display: block;
+    }
+
+    main section article {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    /* Flex cards */
+
+    .products article {
+        flex: 0 0 calc(50% - 1em);
+    }
+}
+
+@media (min-width: 960px) {
+    .burger-menu {
+        display: none;
+    }
+
+    nav {
+        text-align: start;
+    }
+
+    nav li {
+        position: relative;
+        display: flex;
+    }
+
+    ul .compra {
+        display: flex;
+    }
+
+    ul .cuenta {
+        display: flex;
+    }
+
+    /* Flex cards */
+
+    .products article {
+        flex: 0 0 calc(25% - 1em);
+    }
 }
