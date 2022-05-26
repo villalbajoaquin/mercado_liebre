@@ -57,14 +57,21 @@ header {
 
 .top-header .form input {
     width: 75%;
+    font-size: 12px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px;
 }
 
 .top-header .form button {
     background-color: #FFF;
-    border: 1px solid #000;
+    border: 1px solid #FFF;
     outline: none;
     color: #666;
-    padding: 2px;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .top-header .form .submit {
