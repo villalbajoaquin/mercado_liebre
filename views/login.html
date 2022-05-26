@@ -15,6 +15,7 @@
     
         <!--Icons-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="shortcut icon" href="https://mercadolibre.github.io/ui-navigation/mercadolibre/favicon.ico">
     
         <!--Styles-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -65,19 +66,15 @@
     </header>
 
     <main>
-        <form action="/datos" method="POST">
+        <form class="login" action="/datos" method="POST">
             <section class="datos-basicos">
-                <div>
-                    <input type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Nombre de usuario" minlength="6" required>
-                </div>
+                <div><input type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Nombre de usuario" minlength="6" required></div>
             </section>
            
             <section class="password">
-                <div><label for="pass">Contraseña</label></div>
                 <div><input type="password" name="contraseña" id="pass" placeholder="Elegí tu contraseña" minlength="8" required></div>
-                <div><input type="password" name="confirmar-contraseña" id="confirm-pass" placeholder="Volvé a ingresar la contraseña que elegiste" required></div>
             </section>
-            <div><button href="/home.html" type="send">Enviar</button></div>
+            <div class="button"><button href="/home.html" type="send" id="button">Enviar</button></div>
         </form>
     </body>
     </main>
