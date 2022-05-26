@@ -71,7 +71,8 @@ header {
     outline: none;
     color: #666;
     border-radius: 5px;
-    padding: 5px;
+    padding: 8px 6px;
+    cursor: pointer;
 }
 
 .top-header .form .submit {
@@ -133,7 +134,7 @@ nav li {
     padding: 10px;
 }
 
-/* Fin Desplegable */
+/* Main */
 
 .precios {
     display: flex;
@@ -176,6 +177,14 @@ main section article {
     position: relative;
 }
 
+article:hover .description {
+    display: block;
+}
+
+main section article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
 main section article img {
     width: 100%;
 }
@@ -203,7 +212,12 @@ article .main-article {
     border-radius: 50%;
     position: absolute;
     right: 20px;
-    top: -15px
+    top: -15px;
+    transition: 1250ms;
+}
+
+.main-article i:hover {
+    transform: rotate(-450deg);
 }
 
 main section h3 {
@@ -264,6 +278,10 @@ footer .last-items section .i {
     width: 50px;
 }
 
+footer .last-items section .i:hover {
+    color: #EAC926;
+}
+
 a {
     color: #333;
     text-decoration: none;
@@ -275,6 +293,10 @@ a {
     header .top-header .logo,
     header .top-header .form {
         width: 33%;
+    }
+
+    header .top-header p {
+        text-align: right;
     }
 
     .burger-menu {
@@ -314,14 +336,6 @@ a {
     .form {
         position: absolute;
         right: 50px;
-    }
-
-    main section article .description {
-        display: block;
-    }
-
-    main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
     }
 
     /* Flex cards */

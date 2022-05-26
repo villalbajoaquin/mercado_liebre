@@ -87,6 +87,17 @@ form .button button {
     cursor: pointer;
 }
 
+form .button #button {
+    color: #666;
+    background-color: #fff;
+    transition: all 250ms;
+}
+
+form .button #button:hover {
+    color: #fff;
+    background-color: #0044AA;
+}
+
 @media (min-width: 480px) {
     form {
         padding: 10% 0;
