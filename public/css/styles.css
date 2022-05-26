@@ -24,7 +24,9 @@ header {
 
 .top-header {
     padding: 2%;
-    height: 150px;
+    height: 6%;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
@@ -35,7 +37,7 @@ header {
 .top-header .logo {
     width: 200px;
     max-width: 50%;
-    padding: 10px;
+    padding: 10px 10px 10px 0px;
 }
 
 .top-header .logo img {
@@ -44,7 +46,7 @@ header {
 
 .top-header p {
     flex-grow: 3;
-    justify-self: center;
+    justify-self: end;
 }
 
 .top-header .form {
@@ -53,7 +55,7 @@ header {
     right: 10px;
 }
 
-.top-header .form input{
+.top-header .form input {
     width: 75%;
 }
 
@@ -79,7 +81,7 @@ header nav {
 }
 
 header ul li {
-    padding: 10px 0;
+    padding: 10px 2px;
     list-style-type: none;
 }
 
@@ -93,9 +95,7 @@ header nav ul {
     justify-content: space-around;
 }
 
-
 /* Desplegable */
-
 #desplegable {
     text-align: center;
 }
@@ -216,18 +216,45 @@ main section h3 {
 
 /* Footer */
 footer {
+    background-color: #fff;
     color: #666;
     text-align: center;
-    margin: 0 20px;
+    margin-top: 3%;
+    padding: 0 20px;
+    padding-top: 3%;
 }
 
-footer h4 {
-    margin: 20px 0;
+footer .last-items {
+    display: flex;
+    flex-direction: column;
 }
 
-footer i {
+footer .last-items section {
+    margin: 10px 0;
+}
+
+footer .last-items section h4 {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+footer .last-items section p {
+    font-size: 10px;
+    margin: 5px 0;
+}
+
+footer .author h4.copy {
+    font-size: 10px;
+    border-top: 1px solid #666;
+    padding: 15px;
+    margin: 15px 0px 0px;
+}
+
+footer .last-items section .i {
     color: #0044AA;
-
+    margin: 0 auto;
+    font-size: 20px;
+    width: 50px;
 }
 
 a {
@@ -236,6 +263,13 @@ a {
 }
 
 @media (min-width: 480px) {
+
+    header .top-header p,
+    header .top-header .logo,
+    header .top-header .form {
+        width: 33%;
+    }
+
     .burger-menu {
         display: none;
     }
@@ -244,25 +278,31 @@ a {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
     }
 
-    nav {
+    header nav {
         display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
     }
 
-    nav li {
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header nav li {
         position: relative;
         display: flex;
     }
 
-    ul .compra {
-        display: flex;
+    header nav li a {
+        margin-left: 5px;
+        margin-right: 5px;
     }
-
-    ul .cuenta {
-        display: flex;
-    }
-
 
     .form {
         position: absolute;
@@ -278,13 +318,34 @@ a {
     }
 
     /* Flex cards */
-
     .products article {
         flex: 0 0 calc(50% - 1em);
+    }
+
+    /* Footer */
+
+    footer .last-items section {
+        margin: 25px 0;
+    }
+
+    footer .last-items section h4 {
+        font-size: 16px;
+    }
+
+    footer .last-items section p {
+        font-size: 14px;
+    }
+
+    footer section h4.copy {
+        font-size: 12px;
     }
 }
 
 @media (min-width: 960px) {
+    header .top-header .logo {
+        max-width: 280px;
+    }
+
     .burger-menu {
         display: none;
     }
@@ -298,17 +359,24 @@ a {
         display: flex;
     }
 
-    ul .compra {
-        display: flex;
-    }
-
-    ul .cuenta {
-        display: flex;
-    }
-
     /* Flex cards */
-
     .products article {
         flex: 0 0 calc(25% - 1em);
+    }
+
+    /* Footer */
+
+    footer .last-items {
+        flex-direction: row;
+    }
+
+    footer .last-items section h4 {
+        font-size: 12px;
+    }
+
+    footer .last-items section p {
+        width: 80%;
+        margin: 0 auto;
+        font-size: 10px;
     }
 }
