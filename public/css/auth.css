@@ -1,0 +1,55 @@
+/* login.html & register.html's styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+input {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5%;
+    margin: 5px 0;
+    padding: 8px;
+}
+
+label {
+    margin: 20px 0 10px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+main {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-width: 320px;
+}
+
+form {
+    padding: 120px 0;
+    width: 90%;
+    max-width: 500px;
+}
+
+form section {
+    padding: 10px 0;
+}
+
+form .datos-basicos #fecha-nacimiento {
+    margin-top: 20px;
+}
+
+form .pefil-usuario .check {
+    display: flex;
+}
+
+form .pefil-usuario .check input {
+    justify-self: flex-end;
+    width: 50px;
+    margin-bottom: auto;
+}
